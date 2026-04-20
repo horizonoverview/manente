@@ -187,12 +187,28 @@
       margin-bottom: 18px;
       margin-top: -10px;
     }
-    .lm-form-iframe-wrap iframe {
+    /* Form nativo */
+    .lm-form { display: flex; flex-direction: column; gap: 14px; }
+    .lm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .lm-form-group { display: flex; flex-direction: column; gap: 5px; }
+    .lm-form-label { font-size: 13px; font-weight: 600; color: #0D1F38; }
+    .lm-form-input {
       width: 100%;
-      height: 515px;
-      border: none;
+      padding: 12px 14px;
+      border: 1.5px solid #DDE4ED;
       border-radius: 8px;
-      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      color: #0D1F38;
+      background: #F7F9FC;
+      transition: border-color .2s, background .2s;
+      outline: none;
+    }
+    .lm-form-input:focus { border-color: #2563EB; background: #FFFFFF; }
+    .lm-form-input::placeholder { color: #94A3B8; }
+    .lm-form-textarea { resize: vertical; min-height: 80px; }
+    @media (max-width: 480px) {
+      .lm-form-row { grid-template-columns: 1fr; }
     }
 
     /* Scroll target for CTA links */
@@ -415,24 +431,35 @@
 
       <!-- DESTRA: FORM -->
       <div id="form" class="lm-hero-form">
-        <div class="lm-form-iframe-wrap">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/Owhdy2D1L0TZaTDLmJoG"
-            id="inline-Owhdy2D1L0TZaTDLmJoG"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Form 0"
-            data-height="515"
-            data-layout-iframe-id="inline-Owhdy2D1L0TZaTDLmJoG"
-            data-form-id="Owhdy2D1L0TZaTDLmJoG"
-            title="Form 0">
-          </iframe>
-        </div>
+        <p class="lm-hero-form-title">Come posso contattarti?</p>
+        <p class="lm-hero-form-sub">Inserisci i tuoi dati per essere contattato e prenotare la tua visita</p>
+        <form name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lm-form">
+          <input type="hidden" name="form-name" value="contatto">
+          <p style="display:none"><input name="bot-field"></p>
+          <div class="lm-form-row">
+            <div class="lm-form-group">
+              <label class="lm-form-label" for="nome">Nome *</label>
+              <input class="lm-form-input" type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+            </div>
+            <div class="lm-form-group">
+              <label class="lm-form-label" for="cognome">Cognome *</label>
+              <input class="lm-form-input" type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+            </div>
+          </div>
+          <div class="lm-form-group">
+            <label class="lm-form-label" for="email">Email *</label>
+            <input class="lm-form-input" type="email" id="email" name="email" placeholder="la-tua@email.it" required>
+          </div>
+          <div class="lm-form-group">
+            <label class="lm-form-label" for="telefono">Telefono *</label>
+            <input class="lm-form-input" type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000" required>
+          </div>
+          <div class="lm-form-group">
+            <label class="lm-form-label" for="problema">Di cosa hai bisogno?</label>
+            <textarea class="lm-form-input lm-form-textarea" id="problema" name="problema" placeholder="Descrivi brevemente il tuo problema..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="lm-btn" style="width:100%;text-align:center;">Prenota la Prima Sessione →</button>
+        </form>
       </div>
 
     </div>
@@ -731,9 +758,6 @@
       Questo sito non fa parte del sito Facebook o Facebook Inc. Inoltre, questo sito NON è approvato da Facebook in alcun modo. FACEBOOK è un marchio registrato di FACEBOOK, Inc.
     </p>
   </footer>
-
-  <!-- Form embed script (LeadConnector / GoHighLevel) -->
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
   <!-- Scroll reveal -->
   <script>
