@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prima Sessione in Promo – Dott. Leonardo Manente Fisioterapista</title>
+  <meta name="description" content="Torna a muoverti liberamente e spegni il dolore senza ricadute. Prima sessione di fisioterapia con diagnosi completa e piano di trattamento a soli 50€.">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TRACKING – SOSTITUISCI I PLACEHOLDER CON IL TUO CODICE REALE
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- ① GOOGLE TAG MANAGER
+       Incolla qui il codice GTM (quello che inizia con <script>...).
+       Lo trovi in GTM → Amministrazione → Installa Google Tag Manager → sezione <head>.
+       IMPORTANTE: aggiungi anche il frammento <noscript> subito dopo il tag <body> (vedi sotto).
+  -->
+  <!-- GTM – SOSTITUIRE CON IL TUO CODICE
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+
+  <!-- ② META PIXEL (Facebook / Instagram Ads)
+       Incolla qui il tuo Meta Pixel.
+       Trovi il codice in: Business Manager → Events Manager → il tuo Pixel → Istruzioni → Manuale.
+       Sostituisci XXXXXXXXXXXXXXXXXXX con il tuo Pixel ID numerico.
+  -->
+  <!-- META PIXEL – SOSTITUIRE CON IL TUO CODICE
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'XXXXXXXXXXXXXXXXXXX');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <!-- ③ GOOGLE ADS / GA4 DIRETTA (solo se NON usi GTM)
+       Se usi GTM, questo blocco NON serve — GTM lo gestisce già al suo interno.
+       Se invece vuoi installare GA4 o Google Ads senza GTM, sostituisci G-XXXXXXXXXX
+       con il tuo Measurement ID (GA4) oppure AW-XXXXXXXXX (Google Ads).
+  -->
+  <!-- GOOGLE TAG – SOSTITUIRE CON IL TUO CODICE (solo se NON usi GTM)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      color: #0D1F38;
+      background: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; }
+
+    .lm-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── BUTTONS ── */
+    .lm-btn {
+      display: inline-block;
+      background: #2D6A3F;
+      color: #FFFFFF;
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(45,106,63,.35);
+      transition: opacity .2s;
+    }
+    .lm-btn:hover { opacity: .88; }
+
+    /* ════════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════════ */
+    .lm-hero {
+      background: #152D4A;
+      padding: 56px 24px 64px;
+    }
+    .lm-hero-grid {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* LEFT – copy */
+    .lm-hero-left { font-family: 'Barlow', sans-serif; }
+    .lm-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(26px, 3.4vw, 44px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.12;
+      letter-spacing: .3px;
+      margin: 0 0 28px 0;
+    }
+    .lm-headline u { text-decoration: underline; text-underline-offset: 4px; }
+    .lm-offer-box {
+      background: #2D5FA6;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .lm-offer-headline {
+      font-family: 'Barlow', sans-serif;
+      font-size: clamp(17px, 1.8vw, 19px);
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+    }
+    .lm-offer-headline strong { font-weight: 800; color: #FCD34D; }
+    .lm-offer-headline s { opacity: .5; font-weight: 400; }
+    .lm-bonus-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    .lm-bonus-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: 'Barlow', sans-serif;
+      font-size: clamp(16px, 1.6vw, 17px);
+      color: rgba(255,255,255,.9);
+      line-height: 1.55;
+    }
+    .lm-bonus-list li .lm-hand { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .lm-bonus-list li strong { color: #FFFFFF; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* RIGHT – form card */
+    .lm-hero-form {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 12px 48px rgba(0,0,0,.18);
+    }
+    .lm-hero-form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(20px, 2.4vw, 26px);
+      font-weight: 800;
+      color: #0D1F38;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .lm-hero-form-sub {
+      font-size: 14px;
+      color: #546E8A;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      margin-top: -10px;
+    }
+    .lm-form-iframe-wrap iframe {
+      width: 100%;
+      height: 515px;
+      border: none;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Scroll target for CTA links */
+    #form { scroll-margin-top: 24px; }
+
+    /* ════════════════════════════════════════════
+       BENEFITS
+    ════════════════════════════════════════════ */
+    .lm-ben { background: #FFFFFF; padding: 60px 24px; border-bottom: 1px solid #DDE4ED; }
+    .lm-ben-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .lm-ben-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: #F7F9FC; border: 1px solid #DDE4ED; border-radius: 12px; padding: 22px 20px;
+    }
+    .lm-ben-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .lm-ben-text { font-size: clamp(17px, 1.8vw, 19px); line-height: 1.65; color: #0D1F38; }
+    .lm-ben-text strong { font-weight: 700; }
+
+    /* ════════════════════════════════════════════
+       REVIEWS 1
+    ════════════════════════════════════════════ */
+    .lm-rev1 { background: #F7F9FC; padding: 64px 24px; border-top: 1px solid #DDE4ED; border-bottom: 1px solid #DDE4ED; }
+    .lm-plat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 0 auto 40px; }
+    .lm-plat { background: #FFFFFF; border: 1px solid #DDE4ED; border-radius: 10px; padding: 22px 24px; box-shadow: 0 2px 12px rgba(13,31,56,.06); }
+    .lm-plat-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .lm-plat-logo-name { font-size: 13px; font-weight: 700; color: #546E8A; }
+    .lm-plat-name { font-size: 15px; font-weight: 700; color: #0D1F38; margin-bottom: 2px; }
+    .lm-plat-sub { font-size: 12px; color: #94A3B8; margin-bottom: 10px; }
+    .lm-plat-score { display: flex; align-items: center; gap: 10px; }
+    .lm-plat-num { font-size: 28px; font-weight: 700; color: #0D1F38; }
+    .lm-stars { color: #F59E0B; font-size: 18px; }
+    .lm-stars-sm { color: #F59E0B; font-size: 13px; margin-bottom: 8px; }
+    .lm-plat-count { font-size: 13px; color: #546E8A; }
+    .lm-md-badge {
+      width: 16px; height: 16px; border-radius: 3px;
+      background: #00A896; color: #FFFFFF;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 8px; font-weight: 800; flex-shrink: 0;
+    }
+    .lm-cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 960px; margin: 0 auto; }
+    .lm-card { background: #FFFFFF; border-radius: 10px; border: 1px solid #DDE4ED; padding: 20px 18px; box-shadow: 0 2px 8px rgba(13,31,56,.05); }
+    .lm-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .lm-avatar { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #FFFFFF; }
+    .lm-rev-name { font-size: 14px; font-weight: 700; color: #0D1F38; }
+    .lm-rev-meta { font-size: 12px; color: #94A3B8; }
+    .lm-rev-txt { font-size: 14px; color: #546E8A; line-height: 1.65; margin-bottom: 10px; }
+    .lm-rev-src { display: flex; align-items: center; gap: 5px; }
+    .lm-rev-src span { font-size: 11px; color: #94A3B8; font-weight: 600; }
+    .lm-gsv { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ════════════════════════════════════════════
+       ROOT CAUSE
+    ════════════════════════════════════════════ */
+    .lm-rc { background: #152D4A; padding: 72px 24px; }
+    .lm-rc-grid { display: grid; grid-template-columns: 1fr 320px; gap: 52px; align-items: start; }
+    .lm-rc-headline { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(22px, 3.2vw, 36px); font-weight: 800; color: #FFFFFF; line-height: 1.2; margin-bottom: 28px; }
+    .lm-rc-item { margin-bottom: 14px; font-size: clamp(18px, 1.9vw, 20px); line-height: 1.6; color: #FFFFFF; }
+    .lm-rc-item strong { font-weight: 700; }
+    .lm-rc-body { font-size: clamp(17px, 1.8vw, 19px); color: rgba(255,255,255,.78); line-height: 1.78; margin-bottom: 14px; }
+    .lm-rc-body-highlight {
+      font-size: clamp(20px, 2.2vw, 24px);
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      border-left: 4px solid #3B82F6;
+      padding-left: 18px;
+    }
+    .lm-rc-photo { border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #1C3A5E; }
+    .lm-rc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .lm-studio-box { background: #FFFFFF; border-radius: 14px; padding: 40px 40px; margin-top: 48px; text-align: center; box-shadow: 0 8px 32px rgba(13,31,56,.25); }
+    .lm-studio-box p { font-size: clamp(20px, 2.2vw, 24px); font-style: italic; color: #0D1F38; line-height: 1.6; margin-bottom: 12px; }
+    .lm-studio-box p:last-child { margin-bottom: 0; }
+    .lm-studio-box p strong { font-style: normal; font-weight: 800; color: #2563EB; }
+
+    /* ════════════════════════════════════════════
+       OUTCOMES
+    ════════════════════════════════════════════ */
+    .lm-out { background: #FFFFFF; padding: 72px 24px; }
+    .lm-out-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 820px; margin: 0 auto 48px; }
+    .lm-out-item { display: flex; gap: 18px; align-items: flex-start; background: #F7F9FC; border-radius: 10px; padding: 24px 22px; border: 1px solid #DDE4ED; }
+    .lm-out-icon { font-size: 30px; flex-shrink: 0; }
+    .lm-out-txt { font-size: clamp(17px, 1.8vw, 19px); color: #0D1F38; line-height: 1.6; font-weight: 500; }
+    .lm-cta-wrap { text-align: center; }
+    .lm-price { font-size: 18px; color: #546E8A; margin-top: 18px; }
+    .lm-price strong { color: #0D1F38; font-weight: 700; }
+    .lm-price s { text-decoration: line-through; opacity: .5; }
+
+    /* ════════════════════════════════════════════
+       SERVICES
+    ════════════════════════════════════════════ */
+    .lm-srv { background: #F7F9FC; padding: 80px 24px; border-top: 1px solid #DDE4ED; }
+    .lm-srv-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; color: #0D1F38; text-align: center; margin-bottom: 44px; }
+    .lm-srv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .lm-srv-card { background: #FFFFFF; border-radius: 10px; overflow: hidden; border: 1px solid #DDE4ED; box-shadow: 0 2px 12px rgba(13,31,56,.06); }
+    .lm-srv-label { background: #2563EB; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; padding: 14px 24px; text-align: center; }
+    .lm-srv-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #EFF6FF; }
+    .lm-srv-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lm-srv-body { padding: 22px 24px; }
+    .lm-srv-body p { font-size: clamp(16px, 1.7vw, 18px); color: #546E8A; line-height: 1.72; }
+    .lm-srv-body p strong { color: #0D1F38; font-weight: 600; }
+
+    /* ════════════════════════════════════════════
+       CHI SONO
+    ════════════════════════════════════════════ */
+    .lm-cs { background: #152D4A; padding: 80px 24px; }
+    .lm-cs-grid { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: start; }
+    .lm-cs-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #3B82F6; margin-bottom: 14px; }
+    .lm-cs-name { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: #FFFFFF; line-height: 1.1; margin-bottom: 22px; }
+    .lm-cs-body { font-size: clamp(17px, 1.8vw, 19px); color: rgba(255,255,255,.78); line-height: 1.82; margin-bottom: 14px; }
+    .lm-cs-body strong { color: #FFFFFF; font-weight: 700; }
+    .lm-cs-photo { border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #1C3A5E; }
+    .lm-cs-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+    /* ════════════════════════════════════════════
+       TEAM
+    ════════════════════════════════════════════ */
+    .lm-team { background: #152D4A; padding: 0 24px 72px; }
+    .lm-team-box { background: #FFFFFF; border-radius: 14px; padding: 44px 52px; max-width: 860px; margin: 0 auto; box-shadow: 0 8px 32px rgba(13,31,56,.25); overflow: hidden; text-align: center; }
+    .lm-team-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(22px, 3vw, 32px); font-weight: 800; color: #0D1F38; margin-bottom: 14px; line-height: 1.2; }
+    .lm-team-title strong { color: #2563EB; }
+    .lm-team-body { font-size: clamp(17px, 1.8vw, 19px); color: #546E8A; line-height: 1.75; margin-bottom: 28px; }
+    .lm-team-photo { width: 100%; border-radius: 10px; overflow: hidden; max-height: 340px; }
+    .lm-team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+    /* ════════════════════════════════════════════
+       SECOND CTA
+    ════════════════════════════════════════════ */
+    .lm-cta2 { background: #0D1F38; padding: 72px 24px; }
+    .lm-cta2-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .lm-cta2-price { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(26px, 4vw, 42px); font-weight: 800; color: #FFFFFF; margin: 28px 0 4px; }
+    .lm-cta2-price s { font-weight: 500; opacity: .4; }
+    .lm-cta2-sub { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 24px; }
+    .lm-cta2-list { text-align: left; max-width: 400px; margin: 0 auto; }
+    .lm-cta2-list p { font-size: clamp(17px, 1.8vw, 19px); color: rgba(255,255,255,.75); margin-bottom: 8px; }
+
+    /* ════════════════════════════════════════════
+       DICONO DI ME
+    ════════════════════════════════════════════ */
+    .lm-rev2 { background: #F7F9FC; padding: 80px 24px; border-top: 1px solid #DDE4ED; }
+    .lm-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #2563EB; text-align: center; margin-bottom: 10px; }
+    .lm-heading { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(26px, 4vw, 42px); font-weight: 800; color: #0D1F38; text-align: center; margin-bottom: 36px; }
+    .lm-rev2-plats { display: flex; justify-content: center; gap: 16px; margin-bottom: 44px; flex-wrap: wrap; }
+    .lm-rev2-plat { display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #DDE4ED; border-radius: 50px; padding: 10px 20px; box-shadow: 0 2px 8px rgba(13,31,56,.06); }
+    .lm-rev2-plat-name { font-size: 13px; font-weight: 700; color: #0D1F38; }
+    .lm-rev2-plat-score { font-size: 13px; font-weight: 600; color: #546E8A; }
+    .lm-cards6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+    /* ════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+    .lm-footer { background: #060D1A; padding: 36px 24px; text-align: center; }
+    .lm-footer-name { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 600; color: rgba(255,255,255,.6); margin-bottom: 12px; }
+    .lm-footer-copy { font-size: 11px; color: rgba(255,255,255,.25); line-height: 1.85; max-width: 680px; margin: 0 auto; }
+
+    /* ════════════════════════════════════════════
+       SCROLL REVEAL
+    ════════════════════════════════════════════ */
+    .lm-rv { opacity: 0; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+    .lm-rv.on { opacity: 1; transform: none; }
+    .lm-d1 { transition-delay: .1s; }
+    .lm-d2 { transition-delay: .2s; }
+    .lm-d3 { transition-delay: .3s; }
+
+    /* ════════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .lm-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .lm-hero-form { max-width: 520px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 840px) {
+      .lm-ben-grid { grid-template-columns: 1fr; }
+      .lm-plat-grid { grid-template-columns: 1fr; }
+      .lm-cards3, .lm-cards6 { grid-template-columns: 1fr; }
+      .lm-rc-grid { grid-template-columns: 1fr; }
+      .lm-rc-photo { display: none; }
+      .lm-out-grid { grid-template-columns: 1fr; }
+      .lm-srv-grid { grid-template-columns: 1fr; }
+      .lm-cs-grid { grid-template-columns: 1fr; }
+      .lm-cs-photo { display: none; }
+      .lm-team-box { padding: 32px 20px; }
+    }
+    @media (max-width: 480px) {
+      .lm-hero { padding: 40px 16px 48px; }
+      .lm-hero-form { padding: 20px 16px; }
+      .lm-studio-box { padding: 28px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ① GTM noscript – SOSTITUIRE GTM-XXXXXXX con il tuo ID
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  -->
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section class="lm-hero">
+    <div class="lm-hero-grid">
+
+      <!-- SINISTRA: COPY -->
+      <div class="lm-hero-left">
+        <h1 class="lm-headline">Torna a muoverti liberamente e spegni il dolore <u>senza ricadute</u>, e senza dipendere da noi in eterno.</h1>
+        <div class="lm-offer-box">
+          <p class="lm-offer-headline">
+            1 <strong>Sessione di Fisioterapia</strong> con anamnesi iniziale, diagnosi completa e piano di trattamento a soli <strong>50€</strong> al posto di <s>70€</s> + <strong>4 BONUS ESCLUSIVI:</strong>
+          </p>
+          <ul class="lm-bonus-list">
+            <li><span class="lm-hand">👉🏻</span><span> BONUS 1: <strong>Guida di esercizi personalizzata</strong> per ridurre il rischio di future lesioni</span></li>
+            <li><span class="lm-hand">👉🏻</span><span> BONUS 2: Accesso a <strong>video esercizi</strong> da eseguire a casa</span></li>
+            <li><span class="lm-hand">👉🏻</span><span> BONUS 3: <strong>Supporto privato</strong> 24/7 su WhatsApp</span></li>
+            <li><span class="lm-hand">👉🏻</span><span> BONUS 4: <strong>Assistenza prioritaria</strong></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DESTRA: FORM -->
+      <div id="form" class="lm-hero-form">
+        <div class="lm-form-iframe-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/Owhdy2D1L0TZaTDLmJoG"
+            id="inline-Owhdy2D1L0TZaTDLmJoG"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 0"
+            data-height="515"
+            data-layout-iframe-id="inline-Owhdy2D1L0TZaTDLmJoG"
+            data-form-id="Owhdy2D1L0TZaTDLmJoG"
+            title="Form 0">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       BENEFITS
+  ══════════════════════════════════════════════ -->
+  <section class="lm-ben">
+    <div class="lm-inner">
+      <div class="lm-ben-grid">
+        <div class="lm-ben-item lm-rv">
+          <span class="lm-ben-icon">🔍</span>
+          <p class="lm-ben-text">Capisci finalmente <strong>l'origine del tuo dolore</strong> (potrebbe non essere dove credi)</p>
+        </div>
+        <div class="lm-ben-item lm-rv lm-d1">
+          <span class="lm-ben-icon">🛠️</span>
+          <p class="lm-ben-text">Ti diamo gli strumenti affinché <strong>tu non abbia più bisogno di noi</strong></p>
+        </div>
+        <div class="lm-ben-item lm-rv lm-d2">
+          <span class="lm-ben-icon">🎯</span>
+          <p class="lm-ben-text"><strong>Nessun trattamento copia e incolla</strong></p>
+        </div>
+        <div class="lm-ben-item lm-rv lm-d3">
+          <span class="lm-ben-icon">💊</span>
+          <p class="lm-ben-text">Dì addio ad <strong>antidolorifici, cerotti e massaggi</strong> o terapie inconcludenti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       RECENSIONI 1
+  ══════════════════════════════════════════════ -->
+  <section class="lm-rev1">
+    <div class="lm-inner">
+      <div class="lm-plat-grid">
+        <div class="lm-plat lm-rv">
+          <div class="lm-plat-logo">
+            <svg style="width:20px;height:20px" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
+            <span class="lm-plat-logo-name">Google</span>
+          </div>
+          <div class="lm-plat-name">Dott. Manente Leonardo Fisioterapista</div>
+          <div class="lm-plat-sub">Via R. Lombardi, 12 a, Marcon VE</div>
+          <div class="lm-plat-score">
+            <span class="lm-plat-num">5,0</span>
+            <span class="lm-stars">★★★★★</span>
+            <span class="lm-plat-count">28 recensioni</span>
+          </div>
+        </div>
+        <div class="lm-plat lm-rv lm-d1">
+          <div class="lm-plat-logo">
+            <span class="lm-md-badge" style="width:20px;height:20px;font-size:9px;border-radius:4px;">MD</span>
+            <span class="lm-plat-logo-name">MioDottore</span>
+          </div>
+          <div class="lm-plat-name">Dott. Leonardo Manente ✓</div>
+          <div class="lm-plat-sub">Fisioterapista · Massofisioterapista</div>
+          <div class="lm-plat-score">
+            <span class="lm-stars">★★★★★</span>
+            <span class="lm-plat-count">38 recensioni</span>
+          </div>
+        </div>
+      </div>
+      <div class="lm-cards3">
+        <div class="lm-card lm-rv">
+          <div class="lm-card-head">
+            <div class="lm-avatar" style="background:#9CA3AF;">C</div>
+            <div><div class="lm-rev-name">Chiara</div><div class="lm-rev-meta">4 aprile 2023 · Google</div></div>
+          </div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Il Dottor Manente ha curato la mia sciatalgia che mi debilitava da vent'anni, con poche e mirate terapie. Ottimo professionista.</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d1">
+          <div class="lm-card-head">
+            <div class="lm-avatar" style="background:#F59E0B;">A</div>
+            <div><div class="lm-rev-name">Agostina Vian</div><div class="lm-rev-meta">Local Guide · 5 mesi fa</div></div>
+          </div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Davvero competente e professionale. Traspare subito la sua profonda conoscenza ed esperienza pratica. Molto attento al paziente, diagnosi accurate che portano a trattamenti efficaci. Tutta la mia famiglia si affida con piena fiducia da anni. Sempre soddisfatti.</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d2">
+          <div class="lm-card-head">
+            <div class="lm-avatar" style="background:#0A9D8E;">A</div>
+            <div><div class="lm-rev-name">Anna</div><div class="lm-rev-meta">Profilo verificato ✓</div></div>
+          </div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Mi sono rivolta al dott. Leonardo per dei problemi alle cervicali. Con poche sedute e degli esercizi ha individuato il problema facilmente e mi ha aiutata a stare meglio. Lo consiglio, si vede la passione per ciò che fa!</p>
+          <div class="lm-rev-src"><span class="lm-md-badge">MD</span><span>Visita prenotata su MioDottore.it</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ROOT CAUSE
+  ══════════════════════════════════════════════ -->
+  <section class="lm-rc">
+    <div class="lm-inner">
+      <div class="lm-rc-grid">
+        <div>
+          <h2 class="lm-rc-headline lm-rv">Senti il dolore in un punto, ma spesso nasce da tutt'altra parte...</h2>
+          <div class="lm-rv lm-d1">
+            <p class="lm-rc-item"><strong>Mal di schiena?</strong> 👉🏻 Spesso la causa è nel bacino o nelle anche.</p>
+            <p class="lm-rc-item"><strong>Dolore cervicale?</strong> 👉🏻 Potrebbe nascere dalle spalle o dalla colonna.</p>
+            <p class="lm-rc-item"><strong>Male alla spalla?</strong> 👉🏻 A volte dipende da scompensi del collo.</p>
+          </div>
+          <p class="lm-rc-body lm-rv lm-d2">Molte delle persone che arrivano da noi hanno già provato qualcosa — massaggi, antidolorifici, riposo, qualche terapia. Stanno meglio per qualche giorno, poi il dolore torna.</p>
+          <p class="lm-rc-body-highlight lm-rv lm-d2">Il motivo è quasi sempre uno: si è trattato dove fa male, non da dove nasce il problema.</p>
+        </div>
+        <div class="lm-rc-photo lm-rv lm-d1">
+          <img src="https://images.clickfunnels.com/b6/60537bc6614012acfb19b1151b6af3/foto-trattamento.jpg.png" alt="Trattamento fisioterapico">
+        </div>
+      </div>
+      <div class="lm-studio-box lm-rv">
+        <p><em>Nel nostro studio l'obiettivo non è farti stare meglio per qualche giorno, ma <strong>risolvere il problema alla radice</strong>.</em></p>
+        <p><em>E per farlo, prima di tutto troviamo da dove nasce davvero.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       OUTCOMES
+  ══════════════════════════════════════════════ -->
+  <section class="lm-out">
+    <div class="lm-inner">
+      <div class="lm-out-grid">
+        <div class="lm-out-item lm-rv"><span class="lm-out-icon">🗺️</span><p class="lm-out-txt">Sai subito chiaramente cosa hai, perché ce l'hai e quanto tempo ci vuole per risolverlo</p></div>
+        <div class="lm-out-item lm-rv lm-d1"><span class="lm-out-icon">⚡</span><p class="lm-out-txt">Miglioramenti già dalla prima seduta</p></div>
+        <div class="lm-out-item lm-rv lm-d2"><span class="lm-out-icon">🛡️</span><p class="lm-out-txt">Esci con gli strumenti per non ricascarci</p></div>
+        <div class="lm-out-item lm-rv lm-d3"><span class="lm-out-icon">🔒</span><p class="lm-out-txt">Risultati che durano (non serve tornare ogni mese a "mantenere")</p></div>
+      </div>
+      <div class="lm-cta-wrap lm-rv lm-d1">
+        <a href="#form" class="lm-btn">Richiedi ora la Prima sessione in Promo</a>
+        <p class="lm-price">Prima Sessione: <strong>50€</strong> anziché <s>70€</s></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SERVIZI
+  ══════════════════════════════════════════════ -->
+  <section class="lm-srv">
+    <div class="lm-inner">
+      <h2 class="lm-srv-title lm-rv">Che problematica stai accusando?</h2>
+      <div class="lm-srv-grid">
+        <div class="lm-srv-card lm-rv">
+          <div class="lm-srv-label">Cervicalgia</div>
+          <div class="lm-srv-img"><img src="https://images.clickfunnels.com/4e/81c1efc0eb4683bce492b28a57ca37/img-cervicalgia.jpg.png" alt="Cervicalgia"></div>
+          <div class="lm-srv-body"><p>La <strong>mobilizzazione vertebrale</strong> è una tecnica di fisioterapia che mira a migliorare la mobilità e <strong>ridurre il dolore nella colonna vertebrale</strong>.</p></div>
+        </div>
+        <div class="lm-srv-card lm-rv lm-d1">
+          <div class="lm-srv-label">Mal di schiena</div>
+          <div class="lm-srv-img"><img src="https://images.clickfunnels.com/f6/76ded601914ab095214c560c5fa79b/img-maldischiena.jpg.png" alt="Mal di schiena"></div>
+          <div class="lm-srv-body"><p>Il <strong>massaggio</strong> e l'<strong>esercizio terapeutico</strong> sono <strong>personalizzati in base alle esigenze individuali</strong> del paziente, per lombalgia, sciatalgia e altre problematiche muscolo-scheletriche.</p></div>
+        </div>
+        <div class="lm-srv-card lm-rv lm-d2">
+          <div class="lm-srv-label">Spalla bloccata</div>
+          <div class="lm-srv-img"><img src="https://images.clickfunnels.com/80/eaad8df9cf49e6bb1c832e01877c7d/Visualizza-foto-recenti-8-quadrato.png" alt="Spalla bloccata"></div>
+          <div class="lm-srv-body"><p>La <strong>terapia manuale</strong> per la spalla mira a ridurre il dolore e <strong>recuperare la mobilità articolare</strong> completa, intervenendo sulla causa profonda del blocco.</p></div>
+        </div>
+        <div class="lm-srv-card lm-rv lm-d3">
+          <div class="lm-srv-label">Dolore al piede</div>
+          <div class="lm-srv-img"><img src="https://images.clickfunnels.com/33/fd3698d8f8402fbc328d08a8ac6405/img-piede.jpg.png" alt="Dolore al piede"></div>
+          <div class="lm-srv-body"><p>Tendinopatia achillea, dolore al tallone e problematiche da sovraccarico. <strong>La collaborazione con il Venezia Calcio garantisce un'esperienza approfondita su questo tipo di patologie</strong>.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CHI SONO
+  ══════════════════════════════════════════════ -->
+  <section class="lm-cs">
+    <div class="lm-inner">
+      <div class="lm-cs-grid">
+        <div>
+          <p class="lm-cs-eyebrow lm-rv">Chi sono</p>
+          <h2 class="lm-cs-name lm-rv">Dott. Leonardo Manente</h2>
+          <p class="lm-cs-body lm-rv">Sono il <strong>Dott. Leonardo Manente</strong>, fisioterapista laureato presso l'Università di Padova, con un diploma aggiuntivo in massoterapia e diverse specializzazioni avanzate: dalla medicina sportiva applicata al calcio (Diploma FIFA in Football Medicine) alla diagnosi e correzione delle disfunzioni posturali e di movimento, fino alla riabilitazione della spalla e al recupero da infortuni sportivi complessi.</p>
+          <p class="lm-cs-body lm-rv lm-d1">Collaboro con il <strong>Venezia Calcio</strong> come fisioterapista per la squadra Primavera e la Prima Squadra in <strong>Serie A</strong> — e in precedenza con la <strong>Nazionale Italiana di Kickboxing</strong>.</p>
+        </div>
+        <div class="lm-cs-photo lm-rv lm-d1">
+          <img src="https://images.clickfunnels.com/5d/62f1e5b7ba4bda8cd6dc920b5aa8fe/foto-leonardo.jpg.jpg" alt="Dott. Leonardo Manente">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TEAM
+  ══════════════════════════════════════════════ -->
+  <section class="lm-team">
+    <div class="lm-inner">
+      <div class="lm-team-box lm-rv">
+        <h2 class="lm-team-title">Un <strong>team multidisciplinare</strong> che lavora su di te</h2>
+        <p class="lm-team-body">Dietro ogni percorso terapeutico c'è un team multidisciplinare di professionisti, che uniscono competenze diverse per un unico risultato: il tuo benessere.</p>
+        <div class="lm-team-photo">
+          <img src="https://images.clickfunnels.com/48/5df965702941d29eb54877fa9e8586/team.jpg.jpg" alt="Team Studio Manente">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SECONDA CTA
+  ══════════════════════════════════════════════ -->
+  <section class="lm-cta2">
+    <div class="lm-inner">
+      <div class="lm-cta2-inner lm-rv">
+        <a href="#form" class="lm-btn">Richiedi ora la Prima sessione in Promo</a>
+        <div class="lm-cta2-price">Prima Sessione:<br>50€ anziché <s>70€</s></div>
+        <div class="lm-cta2-sub">Include</div>
+        <div class="lm-cta2-list">
+          <p>👉🏻 Anamnesi e diagnosi</p>
+          <p>👉🏻 Piano di trattamento</p>
+          <p>👉🏻 BONUS: Guida di esercizi personalizzata</p>
+          <p>👉🏻 BONUS: Video esercizi da casa</p>
+          <p>👉🏻 BONUS: Supporto privato 24/7 su WhatsApp</p>
+          <p>👉🏻 BONUS: Assistenza prioritaria</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       DICONO DI ME
+  ══════════════════════════════════════════════ -->
+  <section class="lm-rev2">
+    <div class="lm-inner">
+      <p class="lm-eyebrow lm-rv">Recensioni verificate</p>
+      <h2 class="lm-heading lm-rv">DICONO DI ME</h2>
+      <div class="lm-rev2-plats lm-rv">
+        <div class="lm-rev2-plat">
+          <svg style="width:18px;height:18px;flex-shrink:0" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
+          <span class="lm-rev2-plat-name">Google</span>
+          <span class="lm-stars" style="font-size:13px">★★★★★</span>
+          <span class="lm-rev2-plat-score">5/5</span>
+        </div>
+        <div class="lm-rev2-plat">
+          <span class="lm-md-badge" style="width:18px;height:18px;font-size:8px;border-radius:4px;">MD</span>
+          <span class="lm-rev2-plat-name">MioDottore</span>
+          <span class="lm-stars" style="font-size:13px">★★★★★</span>
+          <span class="lm-rev2-plat-score">5/5</span>
+        </div>
+      </div>
+      <div class="lm-cards6">
+        <div class="lm-card lm-rv">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#6366F1;">G</div><div><div class="lm-rev-name">Giorgia</div><div class="lm-rev-meta">Profilo verificato ✓ · 11 set 2023</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Prima visita fisioterapica per cervicale. Professionalità, puntualità e cordialità! Giovane e competente.</p>
+          <div class="lm-rev-src"><span class="lm-md-badge">MD</span><span>Visita prenotata su MioDottore.it</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d1">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#EC4899;">F</div><div><div class="lm-rev-name">Federica Rossi</div><div class="lm-rev-meta">Google · 5 giorni fa</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Ottimo professionista, empatico, diretto ed efficace, individua con precisione il problema e adotta le tecniche più idonee per la completa risoluzione.</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d2">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#0A9D8E;">C</div><div><div class="lm-rev-name">Consuelo Salviato</div><div class="lm-rev-meta">Google · 3 mesi fa</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Giovane, ma preparato, trasmette serietà e infonde fiducia. Molto portato all'ascolto del paziente. Mi sono trovata molto bene, lo consiglio.</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+        <div class="lm-card lm-rv">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#8B5CF6;">M</div><div><div class="lm-rev-name">M.B</div><div class="lm-rev-meta">Studio Fisioterapico Manente</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">È stato un piacere conoscere il Dottor Manente. Ho effettuato le prime tre sedute per un problema alla cervicale. Il percorso sicuramente continuerà. Grazie mille!</p>
+          <div class="lm-rev-src"><span class="lm-md-badge">MD</span><span>MioDottore</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d1">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#14B8A6;">N</div><div><div class="lm-rev-name">Nicola K.</div><div class="lm-rev-meta">Google · un giorno fa</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Un professionista preparato e con grande empatia. Mi sono sentito accolto, ascoltato e supportato nel mio percorso di recupero! Assolutamente consigliato!</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+        <div class="lm-card lm-rv lm-d2">
+          <div class="lm-card-head"><div class="lm-avatar" style="background:#F97316;">M</div><div><div class="lm-rev-name">Marco Petrilli</div><div class="lm-rev-meta">Google · 29 settembre 2022</div></div></div>
+          <div class="lm-stars-sm">★★★★★</div>
+          <p class="lm-rev-txt">Molto bravo, serio e professionale. Con 2 trattamenti il dolore è sparito. I prezzi sono accessibili a differenza di altri.</p>
+          <div class="lm-rev-src"><svg class="lm-gsv" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg><span>Google</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="lm-footer">
+    <p class="lm-footer-name">© 2026 Dott. Leonardo Manente – Fisioterapista professionista a Marcon.</p>
+    <p class="lm-footer-copy">
+      *This Website is not a part of Facebook or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK Inc.<br>
+      Questo sito non fa parte del sito Facebook o Facebook Inc. Inoltre, questo sito NON è approvato da Facebook in alcun modo. FACEBOOK è un marchio registrato di FACEBOOK, Inc.
+    </p>
+  </footer>
+
+  <!-- Form embed script (LeadConnector / GoHighLevel) -->
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+  <!-- Scroll reveal -->
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.lm-rv').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
