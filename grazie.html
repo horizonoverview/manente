@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grazie! – Dott. Leonardo Manente Fisioterapista</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: #152D4A;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── MAIN CARD ── */
+    .ty-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+    .ty-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,.28);
+    }
+
+    /* Fascia colorata in cima */
+    .ty-card-top {
+      background: #2D5FA6;
+      padding: 28px 32px 24px;
+      text-align: center;
+    }
+    .ty-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .ty-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 8px;
+    }
+    .ty-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.1;
+    }
+
+    /* Corpo bianco */
+    .ty-card-body {
+      padding: 32px 36px 36px;
+      text-align: center;
+    }
+    .ty-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 800;
+      color: #0D1F38;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .ty-body {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: #546E8A;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .ty-body strong { color: #0D1F38; font-weight: 700; }
+
+    /* Info box */
+    .ty-info {
+      background: #F7F9FC;
+      border: 1px solid #DDE4ED;
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+    .ty-info-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .ty-info-text { font-size: 15px; color: #546E8A; line-height: 1.65; }
+    .ty-info-text strong { color: #0D1F38; font-weight: 700; display: block; margin-bottom: 2px; }
+
+    /* Stars */
+    .ty-stars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #94A3B8;
+      margin-bottom: 0;
+    }
+    .ty-stars-emoji { font-size: 18px; letter-spacing: 2px; }
+
+    /* ── FOOTER ── */
+    .ty-footer {
+      background: #060D1A;
+      padding: 24px;
+      text-align: center;
+    }
+    .ty-footer p {
+      font-size: 11px;
+      color: rgba(255,255,255,.25);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 480px) {
+      .ty-card-body { padding: 24px 20px 28px; }
+      .ty-card-top { padding: 22px 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ty-wrap">
+    <div class="ty-card">
+
+      <div class="ty-card-top">
+        <span class="ty-icon">✅</span>
+        <p class="ty-tag">Richiesta ricevuta</p>
+        <h1 class="ty-title">Grazie!</h1>
+      </div>
+
+      <div class="ty-card-body">
+        <h2 class="ty-headline">La tua richiesta è stata inviata con successo.</h2>
+        <p class="ty-body">
+          Abbiamo ricevuto i tuoi dati.<br>
+          <strong>Verrai ricontattato al più presto</strong> per fissare la tua prima sessione in promo.
+        </p>
+
+        <div class="ty-info">
+          <span class="ty-info-icon">📞</span>
+          <p class="ty-info-text">
+            <strong>Cosa succede adesso?</strong>
+            Il Dott. Leonardo Manente o il suo team ti chiamerà direttamente per confermare l'appuntamento e rispondere a qualsiasi domanda.
+          </p>
+        </div>
+
+        <div class="ty-stars">
+          <span class="ty-stars-emoji">★★★★★</span>
+          <span>5/5 su Google · MioDottore</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="ty-footer">
+    <p>© 2026 Dott. Leonardo Manente – Fisioterapista professionista a Marcon.<br>
+    Questo sito non fa parte del sito Facebook o Facebook Inc. FACEBOOK è un marchio registrato di FACEBOOK, Inc.</p>
+  </footer>
+
+</body>
+</html>

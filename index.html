@@ -11,11 +11,6 @@
        ═══════════════════════════════════════════════════════════════ -->
 
   <!-- ① GOOGLE TAG MANAGER
-       Incolla qui il codice GTM (quello che inizia con <script>...).
-       Lo trovi in GTM → Amministrazione → Installa Google Tag Manager → sezione <head>.
-       IMPORTANTE: aggiungi anche il frammento <noscript> subito dopo il tag <body> (vedi sotto).
-  -->
-  <!-- GTM – SOSTITUIRE CON IL TUO CODICE
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -23,12 +18,7 @@
   })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
   -->
 
-  <!-- ② META PIXEL (Facebook / Instagram Ads)
-       Incolla qui il tuo Meta Pixel.
-       Trovi il codice in: Business Manager → Events Manager → il tuo Pixel → Istruzioni → Manuale.
-       Sostituisci XXXXXXXXXXXXXXXXXXX con il tuo Pixel ID numerico.
-  -->
-  <!-- META PIXEL – SOSTITUIRE CON IL TUO CODICE
+  <!-- ② META PIXEL
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -40,21 +30,6 @@
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
-  -->
-
-  <!-- ③ GOOGLE ADS / GA4 DIRETTA (solo se NON usi GTM)
-       Se usi GTM, questo blocco NON serve — GTM lo gestisce già al suo interno.
-       Se invece vuoi installare GA4 o Google Ads senza GTM, sostituisci G-XXXXXXXXXX
-       con il tuo Measurement ID (GA4) oppure AW-XXXXXXXXX (Google Ads).
-  -->
-  <!-- GOOGLE TAG – SOSTITUIRE CON IL TUO CODICE (solo se NON usi GTM)
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   -->
 
   <!-- ════════════════════════════════════════════════════════════════ -->
@@ -100,6 +75,7 @@
       transition: opacity .2s;
     }
     .lm-btn:hover { opacity: .88; }
+    .lm-btn:disabled { opacity: .6; cursor: not-allowed; }
 
     /* ════════════════════════════════════════════
        HERO
@@ -112,13 +88,18 @@
       max-width: 1060px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 1fr 460px;
       gap: 48px;
       align-items: start;
     }
 
-    /* LEFT – copy */
-    .lm-hero-left { font-family: 'Barlow', sans-serif; }
+    /* LEFT – headline + foto */
+    .lm-hero-left {
+      font-family: 'Barlow', sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
     .lm-headline {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: clamp(26px, 3.4vw, 44px);
@@ -126,79 +107,108 @@
       color: #ffffff;
       line-height: 1.12;
       letter-spacing: .3px;
-      margin: 0 0 28px 0;
+      margin: 0;
     }
     .lm-headline u { text-decoration: underline; text-underline-offset: 4px; }
-    .lm-offer-box {
+    .lm-hero-photo {
+      border-radius: 14px;
+      overflow: hidden;
+      flex: 1;
+      min-height: 280px;
+    }
+    .lm-hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    /* RIGHT – card combo offerta + form */
+    .lm-hero-combo {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 48px rgba(0,0,0,.22);
+    }
+
+    /* Sezione offerta (blu) */
+    .lm-offer-top {
       background: #2D5FA6;
-      border-radius: 12px;
-      padding: 28px 28px 24px;
-      border: 1px solid rgba(255,255,255,.08);
+      padding: 22px 24px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .lm-offer-headline {
-      font-family: 'Barlow', sans-serif;
-      font-size: clamp(17px, 1.8vw, 19px);
-      font-weight: 600;
+    .lm-promo-block {
+      background: #0D1F38;
+      border-radius: 10px;
+      padding: 14px 18px 12px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .lm-promo-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #FCD34D;
+      margin-bottom: 6px;
+    }
+    .lm-promo-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(48px, 6vw, 64px);
+      font-weight: 800;
       color: #FFFFFF;
-      line-height: 1.6;
-      margin: 0 0 20px 0;
+      line-height: 1;
+      margin-bottom: 2px;
     }
-    .lm-offer-headline strong { font-weight: 800; color: #FCD34D; }
-    .lm-offer-headline s { opacity: .5; font-weight: 400; }
+    .lm-promo-old {
+      font-size: 13px;
+      color: rgba(255,255,255,.4);
+    }
+    .lm-promo-old s { opacity: .9; }
     .lm-bonus-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 13px;
+      gap: 11px;
     }
     .lm-bonus-list li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       font-family: 'Barlow', sans-serif;
-      font-size: clamp(16px, 1.6vw, 17px);
-      color: rgba(255,255,255,.9);
-      line-height: 1.55;
+      font-size: clamp(14px, 1.5vw, 15px);
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
     }
-    .lm-bonus-list li .lm-hand { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .lm-bonus-list li .lm-hand { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
     .lm-bonus-list li strong { color: #FFFFFF; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .lm-bonus-list li.lm-item-base { color: rgba(255,255,255,.98); font-weight: 600; }
 
-    /* RIGHT – form card */
-    .lm-hero-form {
+    /* Sezione form (bianca) */
+    .lm-form-section {
       background: #FFFFFF;
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 12px 48px rgba(0,0,0,.18);
-    }
-    .lm-hero-form-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(20px, 2.4vw, 26px);
-      font-weight: 800;
-      color: #0D1F38;
-      text-align: center;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      padding: 22px 24px 26px;
     }
     .lm-hero-form-sub {
-      font-size: 14px;
-      color: #546E8A;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0D1F38;
       text-align: center;
       line-height: 1.5;
-      margin-bottom: 18px;
-      margin-top: -10px;
+      margin-bottom: 16px;
     }
-    /* Form nativo */
-    .lm-form { display: flex; flex-direction: column; gap: 14px; }
-    .lm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .lm-form-group { display: flex; flex-direction: column; gap: 5px; }
-    .lm-form-label { font-size: 13px; font-weight: 600; color: #0D1F38; }
+    .lm-form { display: flex; flex-direction: column; gap: 12px; }
+    .lm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .lm-form-group { display: flex; flex-direction: column; gap: 4px; }
+    .lm-form-label { font-size: 12px; font-weight: 600; color: #0D1F38; }
     .lm-form-input {
       width: 100%;
-      padding: 12px 14px;
+      padding: 11px 13px;
       border: 1.5px solid #DDE4ED;
       border-radius: 8px;
       font-family: 'Barlow', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       color: #0D1F38;
       background: #F7F9FC;
       transition: border-color .2s, background .2s;
@@ -206,7 +216,8 @@
     }
     .lm-form-input:focus { border-color: #2563EB; background: #FFFFFF; }
     .lm-form-input::placeholder { color: #94A3B8; }
-    .lm-form-textarea { resize: vertical; min-height: 80px; }
+    .lm-form-textarea { resize: vertical; min-height: 72px; }
+    .lm-btn-full { width: 100%; text-align: center; }
     @media (max-width: 480px) {
       .lm-form-row { grid-template-columns: 1fr; }
     }
@@ -378,7 +389,8 @@
     ════════════════════════════════════════════ */
     @media (max-width: 960px) {
       .lm-hero-grid { grid-template-columns: 1fr; gap: 36px; }
-      .lm-hero-form { max-width: 520px; margin: 0 auto; width: 100%; }
+      .lm-hero-combo { max-width: 520px; margin: 0 auto; width: 100%; }
+      .lm-hero-photo { display: none; }
     }
     @media (max-width: 840px) {
       .lm-ben-grid { grid-template-columns: 1fr; }
@@ -394,7 +406,8 @@
     }
     @media (max-width: 480px) {
       .lm-hero { padding: 40px 16px 48px; }
-      .lm-hero-form { padding: 20px 16px; }
+      .lm-offer-top { padding: 18px 20px 16px; }
+      .lm-form-section { padding: 18px 18px 22px; }
       .lm-studio-box { padding: 28px 20px; }
     }
   </style>
@@ -402,64 +415,70 @@
 
 <body>
 
-  <!-- ① GTM noscript – SOSTITUIRE GTM-XXXXXXX con il tuo ID
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  -->
-
   <!-- ══════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════ -->
   <section class="lm-hero">
     <div class="lm-hero-grid">
 
-      <!-- SINISTRA: COPY -->
+      <!-- SINISTRA: headline + foto -->
       <div class="lm-hero-left">
         <h1 class="lm-headline">Torna a muoverti liberamente e spegni il dolore <u>senza ricadute</u>, e senza dipendere da noi in eterno.</h1>
-        <div class="lm-offer-box">
-          <p class="lm-offer-headline">
-            1 <strong>Sessione di Fisioterapia</strong> con anamnesi iniziale, diagnosi completa e piano di trattamento a soli <strong>50€</strong> al posto di <s>70€</s> + <strong>4 BONUS ESCLUSIVI:</strong>
-          </p>
-          <ul class="lm-bonus-list">
-            <li><span class="lm-hand">👉🏻</span><span> BONUS 1: <strong>Guida di esercizi personalizzata</strong> per ridurre il rischio di future lesioni</span></li>
-            <li><span class="lm-hand">👉🏻</span><span> BONUS 2: Accesso a <strong>video esercizi</strong> da eseguire a casa</span></li>
-            <li><span class="lm-hand">👉🏻</span><span> BONUS 3: <strong>Supporto privato</strong> 24/7 su WhatsApp</span></li>
-            <li><span class="lm-hand">👉🏻</span><span> BONUS 4: <strong>Assistenza prioritaria</strong></span></li>
-          </ul>
+        <div class="lm-hero-photo">
+          <img src="brand-assets/foto-leonardo-studio.jpg" alt="Dott. Leonardo Manente">
         </div>
       </div>
 
-      <!-- DESTRA: FORM -->
-      <div id="form" class="lm-hero-form">
-        <p class="lm-hero-form-title">Come posso contattarti?</p>
-        <p class="lm-hero-form-sub">Inserisci i tuoi dati per essere contattato e prenotare la tua visita</p>
-        <form name="contatto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lm-form">
-          <input type="hidden" name="form-name" value="contatto">
-          <p style="display:none"><input name="bot-field"></p>
-          <div class="lm-form-row">
-            <div class="lm-form-group">
-              <label class="lm-form-label" for="nome">Nome *</label>
-              <input class="lm-form-input" type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+      <!-- DESTRA: card offerta + form -->
+      <div id="form" class="lm-hero-combo">
+
+        <!-- Sezione offerta (blu) -->
+        <div class="lm-offer-top">
+          <div class="lm-promo-block">
+            <p class="lm-promo-label">Prima sessione in PROMO</p>
+            <p class="lm-promo-price">50€</p>
+            <p class="lm-promo-old">anziché <s>70€</s></p>
+          </div>
+          <ul class="lm-bonus-list">
+            <li class="lm-item-base"><span class="lm-hand">👉🏻</span><span>Anamnesi iniziale e test posturali</span></li>
+            <li class="lm-item-base"><span class="lm-hand">👉🏻</span><span>Diagnosi completa e piano di trattamento</span></li>
+            <li><span class="lm-hand">👉🏻</span><span>BONUS 1: <strong>Guida di esercizi personalizzata</strong> per ridurre il rischio di future lesioni</span></li>
+            <li><span class="lm-hand">👉🏻</span><span>BONUS 2: Accesso a <strong>video esercizi</strong> da eseguire a casa</span></li>
+            <li><span class="lm-hand">👉🏻</span><span>BONUS 3: <strong>Supporto privato</strong> 24/7 su WhatsApp</span></li>
+            <li><span class="lm-hand">👉🏻</span><span>BONUS 4: <strong>Assistenza prioritaria</strong></span></li>
+          </ul>
+        </div>
+
+        <!-- Sezione form (bianca) -->
+        <div class="lm-form-section">
+          <p class="lm-hero-form-sub">Inserisci i tuoi dati per essere contattato e prenotare la tua visita ⤵️</p>
+          <form id="zapier-form" class="lm-form" novalidate>
+            <div class="lm-form-row">
+              <div class="lm-form-group">
+                <label class="lm-form-label" for="nome">Nome *</label>
+                <input class="lm-form-input" type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+              </div>
+              <div class="lm-form-group">
+                <label class="lm-form-label" for="cognome">Cognome *</label>
+                <input class="lm-form-input" type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+              </div>
             </div>
             <div class="lm-form-group">
-              <label class="lm-form-label" for="cognome">Cognome *</label>
-              <input class="lm-form-input" type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+              <label class="lm-form-label" for="email">Email *</label>
+              <input class="lm-form-input" type="email" id="email" name="email" placeholder="la-tua@email.it" required>
             </div>
-          </div>
-          <div class="lm-form-group">
-            <label class="lm-form-label" for="email">Email *</label>
-            <input class="lm-form-input" type="email" id="email" name="email" placeholder="la-tua@email.it" required>
-          </div>
-          <div class="lm-form-group">
-            <label class="lm-form-label" for="telefono">Telefono *</label>
-            <input class="lm-form-input" type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000" required>
-          </div>
-          <div class="lm-form-group">
-            <label class="lm-form-label" for="problema">Di cosa hai bisogno?</label>
-            <textarea class="lm-form-input lm-form-textarea" id="problema" name="problema" placeholder="Descrivi brevemente il tuo problema..." rows="3"></textarea>
-          </div>
-          <button type="submit" class="lm-btn" style="width:100%;text-align:center;">Prenota la Prima Sessione →</button>
-        </form>
+            <div class="lm-form-group">
+              <label class="lm-form-label" for="telefono">Telefono *</label>
+              <input class="lm-form-input" type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000" required>
+            </div>
+            <div class="lm-form-group">
+              <label class="lm-form-label" for="problema">Raccontaci qual è il tuo problema al momento</label>
+              <textarea class="lm-form-input lm-form-textarea" id="problema" name="problema" placeholder="Descrivi brevemente il tuo problema..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="lm-btn lm-btn-full" id="submit-btn">Prenota la Prima Sessione →</button>
+          </form>
+        </div>
+
       </div>
 
     </div>
@@ -767,6 +786,35 @@
       });
     }, { threshold: 0.08 });
     document.querySelectorAll('.lm-rv').forEach(el => obs.observe(el));
+  </script>
+
+  <!-- Form → Zapier webhook -->
+  <script>
+    document.getElementById('zapier-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = document.getElementById('submit-btn');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      btn.textContent = 'Invio in corso...';
+      btn.disabled = true;
+
+      var data = new FormData(form);
+
+      fetch('https://hooks.zapier.com/hooks/catch/17883793/ujitjay/', {
+        method: 'POST',
+        body: data,
+        mode: 'no-cors'
+      }).then(function() {
+        window.location.href = 'grazie.html';
+      }).catch(function() {
+        window.location.href = 'grazie.html';
+      });
+    });
   </script>
 
 </body>
