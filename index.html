@@ -333,6 +333,7 @@
     .lm-cs-body strong { color: #FFFFFF; font-weight: 700; }
     .lm-cs-photo { border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #1C3A5E; }
     .lm-cs-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .lm-cs-photo-mobile { display: none; }
 
     /* ════════════════════════════════════════════
        TEAM
@@ -402,6 +403,14 @@
       .lm-srv-grid { grid-template-columns: 1fr; }
       .lm-cs-grid { grid-template-columns: 1fr; }
       .lm-cs-photo { display: none; }
+      .lm-cs-photo-mobile {
+        display: block;
+        border-radius: 12px;
+        overflow: hidden;
+        max-height: 340px;
+        margin-bottom: 20px;
+      }
+      .lm-cs-photo-mobile img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
       .lm-team-box { padding: 32px 20px; }
     }
     @media (max-width: 480px) {
@@ -423,9 +432,9 @@
 
       <!-- SINISTRA: headline + foto -->
       <div class="lm-hero-left">
-        <h1 class="lm-headline">Torna a muoverti liberamente e spegni il dolore <u>senza ricadute</u>, e senza dipendere da noi in eterno.</h1>
+        <h1 class="lm-headline">Spegni il dolore <u>definitivamente</u>, e torna a muoverti liberamente.</h1>
         <div class="lm-hero-photo">
-          <img src="brand-assets/foto-leonardo-studio.jpg" alt="Dott. Leonardo Manente">
+          <img src="brand-assets/foto-leonardo-studio.jpg.jpg" alt="Dott. Leonardo Manente">
         </div>
       </div>
 
@@ -659,11 +668,16 @@
         <div>
           <p class="lm-cs-eyebrow lm-rv">Chi sono</p>
           <h2 class="lm-cs-name lm-rv">Dott. Leonardo Manente</h2>
+          <!-- Foto visibile solo su mobile, tra nome e testo -->
+          <div class="lm-cs-photo-mobile lm-rv">
+            <img src="brand-assets/foto-leonardo.jpg.jpg" alt="Dott. Leonardo Manente">
+          </div>
           <p class="lm-cs-body lm-rv">Sono il <strong>Dott. Leonardo Manente</strong>, fisioterapista laureato presso l'Università di Padova, con un diploma aggiuntivo in massoterapia e diverse specializzazioni avanzate: dalla medicina sportiva applicata al calcio (Diploma FIFA in Football Medicine) alla diagnosi e correzione delle disfunzioni posturali e di movimento, fino alla riabilitazione della spalla e al recupero da infortuni sportivi complessi.</p>
           <p class="lm-cs-body lm-rv lm-d1">Collaboro con il <strong>Venezia Calcio</strong> come fisioterapista per la squadra Primavera e la Prima Squadra in <strong>Serie A</strong> — e in precedenza con la <strong>Nazionale Italiana di Kickboxing</strong>.</p>
         </div>
+        <!-- Foto visibile solo su desktop -->
         <div class="lm-cs-photo lm-rv lm-d1">
-          <img src="https://images.clickfunnels.com/5d/62f1e5b7ba4bda8cd6dc920b5aa8fe/foto-leonardo.jpg.jpg" alt="Dott. Leonardo Manente">
+          <img src="brand-assets/foto-leonardo.jpg.jpg" alt="Dott. Leonardo Manente">
         </div>
       </div>
     </div>
