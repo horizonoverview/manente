@@ -146,24 +146,30 @@
     }
     .lm-promo-label {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(16px, 1.8vw, 20px);
+      font-size: clamp(20px, 2.4vw, 26px);
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #FCD34D;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
+    }
+    .lm-promo-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
     }
     .lm-promo-price {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(48px, 6vw, 64px);
+      font-size: clamp(42px, 5vw, 56px);
       font-weight: 800;
       color: #FFFFFF;
       line-height: 1;
-      margin-bottom: 2px;
     }
     .lm-promo-old {
-      font-size: 13px;
-      color: rgba(255,255,255,.4);
+      font-size: 16px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.3;
     }
     .lm-promo-old s { opacity: .9; }
     .lm-bonus-list {
@@ -177,11 +183,11 @@
       align-items: flex-start;
       gap: 10px;
       font-family: 'Barlow', sans-serif;
-      font-size: clamp(14px, 1.5vw, 15px);
+      font-size: clamp(15px, 1.6vw, 17px);
       color: rgba(255,255,255,.88);
-      line-height: 1.5;
+      line-height: 1.55;
     }
-    .lm-bonus-list li .lm-hand { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+    .lm-bonus-list li .lm-hand { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
     .lm-bonus-list li strong { color: #FFFFFF; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
     .lm-bonus-list li.lm-item-base { color: rgba(255,255,255,.98); font-weight: 600; }
 
@@ -200,15 +206,15 @@
     }
     .lm-form { display: flex; flex-direction: column; gap: 12px; }
     .lm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .lm-form-group { display: flex; flex-direction: column; gap: 4px; }
-    .lm-form-label { font-size: 12px; font-weight: 600; color: #0D1F38; }
+    .lm-form-group { display: flex; flex-direction: column; gap: 5px; }
+    .lm-form-label { font-size: 14px; font-weight: 600; color: #0D1F38; }
     .lm-form-input {
       width: 100%;
-      padding: 11px 13px;
+      padding: 13px 15px;
       border: 1.5px solid #DDE4ED;
       border-radius: 8px;
       font-family: 'Barlow', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       color: #0D1F38;
       background: #F7F9FC;
       transition: border-color .2s, background .2s;
@@ -216,7 +222,7 @@
     }
     .lm-form-input:focus { border-color: #2563EB; background: #FFFFFF; }
     .lm-form-input::placeholder { color: #94A3B8; }
-    .lm-form-textarea { resize: vertical; min-height: 72px; }
+    .lm-form-textarea { resize: vertical; min-height: 80px; }
     .lm-btn-full { width: 100%; text-align: center; }
     @media (max-width: 480px) {
       .lm-form-row { grid-template-columns: 1fr; }
@@ -228,15 +234,25 @@
     /* ════════════════════════════════════════════
        BENEFITS
     ════════════════════════════════════════════ */
-    .lm-ben { background: #FFFFFF; padding: 60px 24px; border-bottom: 1px solid #DDE4ED; }
-    .lm-ben-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .lm-ben-item {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: #F7F9FC; border: 1px solid #DDE4ED; border-radius: 12px; padding: 22px 20px;
+    .lm-ben { background: #FFFFFF; padding: 52px 24px 40px; border-bottom: 1px solid #DDE4ED; }
+    .lm-ben-list { display: flex; flex-direction: column; gap: 0; max-width: 780px; margin: 0 auto; }
+    .lm-ben-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 4px;
+      border-bottom: 1px solid #EEF2F7;
     }
-    .lm-ben-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
-    .lm-ben-text { font-size: clamp(17px, 1.8vw, 19px); line-height: 1.65; color: #0D1F38; }
-    .lm-ben-text strong { font-weight: 700; }
+    .lm-ben-row:last-child { border-bottom: none; }
+    .lm-ben-icon-wrap {
+      width: 54px; height: 54px; border-radius: 50%; flex-shrink: 0;
+      background: #EFF6FF;
+      border: 2px solid #DBEAFE;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .lm-ben-text { font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; color: #0D1F38; }
+    .lm-ben-text strong { font-weight: 700; color: #152D4A; }
 
     /* ════════════════════════════════════════════
        REVIEWS 1
@@ -252,22 +268,28 @@
     .lm-plat-num { font-size: 28px; font-weight: 700; color: #0D1F38; }
     .lm-stars { color: #F59E0B; font-size: 18px; }
     .lm-stars-sm { color: #F59E0B; font-size: 13px; margin-bottom: 8px; }
-    .lm-plat-count { font-size: 13px; color: #546E8A; }
+    .lm-plat-count { font-size: 14px; color: #546E8A; font-weight: 600; }
     .lm-md-badge {
       width: 16px; height: 16px; border-radius: 3px;
       background: #00A896; color: #FFFFFF;
       display: inline-flex; align-items: center; justify-content: center;
       font-size: 8px; font-weight: 800; flex-shrink: 0;
     }
+    /* Stile piattaforma con bordo colorato */
+    .lm-plat-md { border-top: 4px solid #00A896; }
+    .lm-plat-google { border-top: 4px solid #4285f4; }
+    /* Pill recensioni finali → ora sostituito da griglia */
+    .lm-rev2-plats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto 44px; }
+    .lm-rev2-plat { background: #FFFFFF; border: 1px solid #DDE4ED; border-radius: 10px; padding: 20px 22px; box-shadow: 0 2px 12px rgba(13,31,56,.06); }
     .lm-cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 960px; margin: 0 auto; }
     .lm-card { background: #FFFFFF; border-radius: 10px; border: 1px solid #DDE4ED; padding: 20px 18px; box-shadow: 0 2px 8px rgba(13,31,56,.05); }
     .lm-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
     .lm-avatar { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #FFFFFF; }
     .lm-rev-name { font-size: 14px; font-weight: 700; color: #0D1F38; }
     .lm-rev-meta { font-size: 12px; color: #94A3B8; }
-    .lm-rev-txt { font-size: 14px; color: #546E8A; line-height: 1.65; margin-bottom: 10px; }
+    .lm-rev-txt { font-size: 15px; color: #546E8A; line-height: 1.68; margin-bottom: 10px; }
     .lm-rev-src { display: flex; align-items: center; gap: 5px; }
-    .lm-rev-src span { font-size: 11px; color: #94A3B8; font-weight: 600; }
+    .lm-rev-src span { font-size: 12px; color: #94A3B8; font-weight: 600; }
     .lm-gsv { width: 14px; height: 14px; flex-shrink: 0; }
 
     /* ════════════════════════════════════════════
@@ -298,11 +320,31 @@
     /* ════════════════════════════════════════════
        OUTCOMES
     ════════════════════════════════════════════ */
-    .lm-out { background: #FFFFFF; padding: 72px 24px; }
-    .lm-out-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 820px; margin: 0 auto 48px; }
-    .lm-out-item { display: flex; gap: 18px; align-items: flex-start; background: #F7F9FC; border-radius: 10px; padding: 24px 22px; border: 1px solid #DDE4ED; }
-    .lm-out-icon { font-size: 30px; flex-shrink: 0; }
-    .lm-out-txt { font-size: clamp(17px, 1.8vw, 19px); color: #0D1F38; line-height: 1.6; font-weight: 500; }
+    .lm-out { background: #F7F9FC; padding: 72px 24px; border-top: 1px solid #DDE4ED; }
+    .lm-out-list { display: flex; flex-direction: column; gap: 14px; max-width: 720px; margin: 0 auto 48px; }
+    .lm-out-row {
+      display: flex;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(13,31,56,.08);
+    }
+    .lm-out-badge {
+      background: #152D4A;
+      min-width: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+      padding: 18px 12px;
+    }
+    .lm-out-content {
+      background: #FFFFFF;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .lm-out-txt { font-size: clamp(17px, 1.8vw, 19px); color: #0D1F38; line-height: 1.55; font-weight: 500; }
     .lm-cta-wrap { text-align: center; }
     .lm-price { font-size: 18px; color: #546E8A; margin-top: 18px; }
     .lm-price strong { color: #0D1F38; font-weight: 700; }
@@ -316,7 +358,7 @@
     .lm-srv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .lm-srv-card { background: #FFFFFF; border-radius: 10px; overflow: hidden; border: 1px solid #DDE4ED; box-shadow: 0 2px 12px rgba(13,31,56,.06); }
     .lm-srv-label { background: #2563EB; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; padding: 14px 24px; text-align: center; }
-    .lm-srv-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #EFF6FF; }
+    .lm-srv-img { width: 100%; aspect-ratio: 1/1; overflow: hidden; background: #EFF6FF; }
     .lm-srv-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .lm-srv-body { padding: 22px 24px; }
     .lm-srv-body p { font-size: clamp(16px, 1.7vw, 18px); color: #546E8A; line-height: 1.72; }
@@ -363,10 +405,6 @@
     .lm-rev2 { background: #F7F9FC; padding: 80px 24px; border-top: 1px solid #DDE4ED; }
     .lm-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #2563EB; text-align: center; margin-bottom: 10px; }
     .lm-heading { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(26px, 4vw, 42px); font-weight: 800; color: #0D1F38; text-align: center; margin-bottom: 36px; }
-    .lm-rev2-plats { display: flex; justify-content: center; gap: 16px; margin-bottom: 44px; flex-wrap: wrap; }
-    .lm-rev2-plat { display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #DDE4ED; border-radius: 50px; padding: 10px 20px; box-shadow: 0 2px 8px rgba(13,31,56,.06); }
-    .lm-rev2-plat-name { font-size: 13px; font-weight: 700; color: #0D1F38; }
-    .lm-rev2-plat-score { font-size: 13px; font-weight: 600; color: #546E8A; }
     .lm-cards6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 
     /* ════════════════════════════════════════════
@@ -392,6 +430,7 @@
       .lm-hero-grid { grid-template-columns: 1fr; gap: 36px; }
       .lm-hero-combo { max-width: 520px; margin: 0 auto; width: 100%; }
       .lm-hero-photo { display: none; }
+      .lm-headline { font-size: clamp(32px, 7vw, 48px); }
     }
     @media (max-width: 840px) {
       .lm-ben-grid { grid-template-columns: 1fr; }
@@ -411,13 +450,70 @@
         margin-bottom: 20px;
       }
       .lm-cs-photo-mobile img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-      .lm-team-box { padding: 32px 20px; }
+      .lm-team { padding: 0 8px 60px; }
+      .lm-team-box { padding: 28px 18px; border-radius: 12px; }
+      .lm-rev2-plats { grid-template-columns: 1fr; gap: 14px; }
+      .lm-out { padding: 52px 16px; }
+      .lm-ben { padding: 40px 16px; }
     }
     @media (max-width: 480px) {
       .lm-hero { padding: 40px 16px 48px; }
       .lm-offer-top { padding: 18px 20px 16px; }
       .lm-form-section { padding: 18px 18px 22px; }
       .lm-studio-box { padding: 28px 20px; }
+    }
+
+    /* ════════════════════════════════════════════
+       MOBILE FONT BOOST (max 600px)
+    ════════════════════════════════════════════ */
+    @media (max-width: 600px) {
+      /* Promo block */
+      .lm-promo-label  { font-size: 22px; letter-spacing: 1px; }
+      .lm-promo-price  { font-size: 38px; }
+      .lm-promo-old    { font-size: 20px; color: rgba(255,255,255,.75); }
+
+      /* Bullet offer list */
+      .lm-bonus-list li         { font-size: 17px; line-height: 1.55; }
+      .lm-bonus-list li .lm-hand { font-size: 17px; }
+
+      /* Form */
+      .lm-hero-form-sub { font-size: 17px; }
+      .lm-form-label    { font-size: 16px; }
+      .lm-form-input    { font-size: 17px; padding: 14px 15px; }
+
+      /* Benefits rows */
+      .lm-ben-text      { font-size: 18px; }
+      .lm-ben-icon-wrap { width: 52px; height: 52px; font-size: 22px; }
+
+      /* Outcome rows */
+      .lm-out-txt   { font-size: 18px; }
+      .lm-out-badge { font-size: 26px; min-width: 62px; }
+
+      /* Review cards */
+      .lm-rev-txt  { font-size: 16px; }
+      .lm-rev-name { font-size: 15px; }
+
+      /* Platform cards recensioni */
+      .lm-plat-num   { font-size: 30px; }
+      .lm-plat-count { font-size: 15px; }
+      .lm-stars      { font-size: 20px; }
+      .lm-plat-name  { font-size: 16px; }
+      .lm-plat-sub   { font-size: 13px; }
+
+      /* Root cause & studio box */
+      .lm-rc-item { font-size: 19px; }
+      .lm-rc-body { font-size: 18px; }
+      .lm-rc-body-highlight { font-size: 20px; }
+      .lm-studio-box p { font-size: 19px; }
+
+      /* Cta2 list */
+      .lm-cta2-list p { font-size: 18px; }
+
+      /* Service card body */
+      .lm-srv-body p { font-size: 17px; }
+
+      /* Chi sono */
+      .lm-cs-body { font-size: 18px; }
     }
   </style>
 </head>
@@ -444,9 +540,11 @@
         <!-- Sezione offerta (blu) -->
         <div class="lm-offer-top">
           <div class="lm-promo-block">
-            <p class="lm-promo-label">Prima sessione in PROMO</p>
-            <p class="lm-promo-price">50€</p>
-            <p class="lm-promo-old">anziché <s>70€</s></p>
+            <p class="lm-promo-label">Prima Sessione in Promo</p>
+            <div class="lm-promo-price-row">
+              <span class="lm-promo-price">50€</span>
+              <span class="lm-promo-old">anziché <s>70€</s></span>
+            </div>
           </div>
           <ul class="lm-bonus-list">
             <li class="lm-item-base"><span class="lm-hand">👉🏻</span><span>Anamnesi iniziale e test posturali</span></li>
@@ -498,21 +596,21 @@
   ══════════════════════════════════════════════ -->
   <section class="lm-ben">
     <div class="lm-inner">
-      <div class="lm-ben-grid">
-        <div class="lm-ben-item lm-rv">
-          <span class="lm-ben-icon">🔍</span>
+      <div class="lm-ben-list">
+        <div class="lm-ben-row lm-rv">
+          <span class="lm-ben-icon-wrap">🔍</span>
           <p class="lm-ben-text">Capisci finalmente <strong>l'origine del tuo dolore</strong> (potrebbe non essere dove credi)</p>
         </div>
-        <div class="lm-ben-item lm-rv lm-d1">
-          <span class="lm-ben-icon">🛠️</span>
+        <div class="lm-ben-row lm-rv lm-d1">
+          <span class="lm-ben-icon-wrap">🛠️</span>
           <p class="lm-ben-text">Ti diamo gli strumenti affinché <strong>tu non abbia più bisogno di noi</strong></p>
         </div>
-        <div class="lm-ben-item lm-rv lm-d2">
-          <span class="lm-ben-icon">🎯</span>
+        <div class="lm-ben-row lm-rv lm-d2">
+          <span class="lm-ben-icon-wrap">🎯</span>
           <p class="lm-ben-text"><strong>Nessun trattamento copia e incolla</strong></p>
         </div>
-        <div class="lm-ben-item lm-rv lm-d3">
-          <span class="lm-ben-icon">💊</span>
+        <div class="lm-ben-row lm-rv lm-d3">
+          <span class="lm-ben-icon-wrap">💊</span>
           <p class="lm-ben-text">Dì addio ad <strong>antidolorifici, cerotti e massaggi</strong> o terapie inconcludenti</p>
         </div>
       </div>
@@ -525,29 +623,32 @@
   <section class="lm-rev1">
     <div class="lm-inner">
       <div class="lm-plat-grid">
-        <div class="lm-plat lm-rv">
+        <!-- MioDottore prima -->
+        <div class="lm-plat lm-plat-md lm-rv">
           <div class="lm-plat-logo">
-            <svg style="width:20px;height:20px" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
-            <span class="lm-plat-logo-name">Google</span>
+            <span class="lm-md-badge" style="width:26px;height:26px;font-size:11px;border-radius:5px;font-weight:900;">MD</span>
+            <span class="lm-plat-logo-name" style="font-size:15px;color:#00A896;">MioDottore</span>
+          </div>
+          <div class="lm-plat-name">Dott. Leonardo Manente ✓</div>
+          <div class="lm-plat-sub">Fisioterapista · Massofisioterapista</div>
+          <div class="lm-plat-score">
+            <span class="lm-plat-num">5,0</span>
+            <span class="lm-stars">★★★★★</span>
+            <span class="lm-plat-count">160 recensioni</span>
+          </div>
+        </div>
+        <!-- Google secondo -->
+        <div class="lm-plat lm-plat-google lm-rv lm-d1">
+          <div class="lm-plat-logo">
+            <svg style="width:22px;height:22px" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
+            <span class="lm-plat-logo-name" style="font-size:15px;">Google</span>
           </div>
           <div class="lm-plat-name">Dott. Manente Leonardo Fisioterapista</div>
           <div class="lm-plat-sub">Via R. Lombardi, 12 a, Marcon VE</div>
           <div class="lm-plat-score">
             <span class="lm-plat-num">5,0</span>
             <span class="lm-stars">★★★★★</span>
-            <span class="lm-plat-count">28 recensioni</span>
-          </div>
-        </div>
-        <div class="lm-plat lm-rv lm-d1">
-          <div class="lm-plat-logo">
-            <span class="lm-md-badge" style="width:20px;height:20px;font-size:9px;border-radius:4px;">MD</span>
-            <span class="lm-plat-logo-name">MioDottore</span>
-          </div>
-          <div class="lm-plat-name">Dott. Leonardo Manente ✓</div>
-          <div class="lm-plat-sub">Fisioterapista · Massofisioterapista</div>
-          <div class="lm-plat-score">
-            <span class="lm-stars">★★★★★</span>
-            <span class="lm-plat-count">38 recensioni</span>
+            <span class="lm-plat-count">39 recensioni</span>
           </div>
         </div>
       </div>
@@ -615,11 +716,23 @@
   ══════════════════════════════════════════════ -->
   <section class="lm-out">
     <div class="lm-inner">
-      <div class="lm-out-grid">
-        <div class="lm-out-item lm-rv"><span class="lm-out-icon">🗺️</span><p class="lm-out-txt">Sai subito chiaramente cosa hai, perché ce l'hai e quanto tempo ci vuole per risolverlo</p></div>
-        <div class="lm-out-item lm-rv lm-d1"><span class="lm-out-icon">⚡</span><p class="lm-out-txt">Miglioramenti già dalla prima seduta</p></div>
-        <div class="lm-out-item lm-rv lm-d2"><span class="lm-out-icon">🛡️</span><p class="lm-out-txt">Esci con gli strumenti per non ricascarci</p></div>
-        <div class="lm-out-item lm-rv lm-d3"><span class="lm-out-icon">🔒</span><p class="lm-out-txt">Risultati che durano (non serve tornare ogni mese a "mantenere")</p></div>
+      <div class="lm-out-list">
+        <div class="lm-out-row lm-rv">
+          <div class="lm-out-badge">🗺️</div>
+          <div class="lm-out-content"><p class="lm-out-txt">Sai subito chiaramente cosa hai, perché ce l'hai e quanto tempo ci vuole per risolverlo</p></div>
+        </div>
+        <div class="lm-out-row lm-rv lm-d1">
+          <div class="lm-out-badge">⚡</div>
+          <div class="lm-out-content"><p class="lm-out-txt">Miglioramenti già dalla prima seduta</p></div>
+        </div>
+        <div class="lm-out-row lm-rv lm-d2">
+          <div class="lm-out-badge">🛡️</div>
+          <div class="lm-out-content"><p class="lm-out-txt">Esci con gli strumenti per non ricascarci</p></div>
+        </div>
+        <div class="lm-out-row lm-rv lm-d3">
+          <div class="lm-out-badge">🔒</div>
+          <div class="lm-out-content"><p class="lm-out-txt">Risultati che durano (non serve tornare ogni mese a "mantenere")</p></div>
+        </div>
       </div>
       <div class="lm-cta-wrap lm-rv lm-d1">
         <a href="#form" class="lm-btn">Richiedi ora la Prima sessione in Promo</a>
@@ -727,17 +840,33 @@
       <p class="lm-eyebrow lm-rv">Recensioni verificate</p>
       <h2 class="lm-heading lm-rv">DICONO DI ME</h2>
       <div class="lm-rev2-plats lm-rv">
-        <div class="lm-rev2-plat">
-          <svg style="width:18px;height:18px;flex-shrink:0" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
-          <span class="lm-rev2-plat-name">Google</span>
-          <span class="lm-stars" style="font-size:13px">★★★★★</span>
-          <span class="lm-rev2-plat-score">5/5</span>
+        <!-- MioDottore prima -->
+        <div class="lm-rev2-plat lm-plat-md">
+          <div class="lm-plat-logo">
+            <span class="lm-md-badge" style="width:26px;height:26px;font-size:11px;border-radius:5px;font-weight:900;">MD</span>
+            <span class="lm-plat-logo-name" style="font-size:15px;color:#00A896;">MioDottore</span>
+          </div>
+          <div class="lm-plat-name">Dott. Leonardo Manente ✓</div>
+          <div class="lm-plat-sub">Fisioterapista · Massofisioterapista</div>
+          <div class="lm-plat-score">
+            <span class="lm-plat-num">5,0</span>
+            <span class="lm-stars">★★★★★</span>
+            <span class="lm-plat-count">160 recensioni</span>
+          </div>
         </div>
-        <div class="lm-rev2-plat">
-          <span class="lm-md-badge" style="width:18px;height:18px;font-size:8px;border-radius:4px;">MD</span>
-          <span class="lm-rev2-plat-name">MioDottore</span>
-          <span class="lm-stars" style="font-size:13px">★★★★★</span>
-          <span class="lm-rev2-plat-score">5/5</span>
+        <!-- Google secondo -->
+        <div class="lm-rev2-plat lm-plat-google">
+          <div class="lm-plat-logo">
+            <svg style="width:22px;height:22px" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg"><path d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z" fill="#4285f4"/><path d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z" fill="#34a853"/><path d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z" fill="#fbbc04"/><path d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z" fill="#ea4335"/></svg>
+            <span class="lm-plat-logo-name" style="font-size:15px;">Google</span>
+          </div>
+          <div class="lm-plat-name">Dott. Manente Leonardo Fisioterapista</div>
+          <div class="lm-plat-sub">Via R. Lombardi, 12 a, Marcon VE</div>
+          <div class="lm-plat-score">
+            <span class="lm-plat-num">5,0</span>
+            <span class="lm-stars">★★★★★</span>
+            <span class="lm-plat-count">39 recensioni</span>
+          </div>
         </div>
       </div>
       <div class="lm-cards6">
