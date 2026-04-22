@@ -959,13 +959,13 @@
       btn.disabled = true;
 
       var fd = new FormData(form);
-      var payload = {};
-      fd.forEach(function(v, k) { payload[k] = v; });
+      var params = new URLSearchParams();
+      fd.forEach(function(v, k) { params.append(k, v); });
 
       fetch('https://hooks.zapier.com/hooks/catch/17883793/ujitjay/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: params,
+        mode: 'no-cors'
       }).then(function() {
         window.location.href = 'grazie.html';
       }).catch(function() {
