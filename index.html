@@ -958,12 +958,14 @@
       btn.textContent = 'Invio in corso...';
       btn.disabled = true;
 
-      var data = new FormData(form);
+      var fd = new FormData(form);
+      var payload = {};
+      fd.forEach(function(v, k) { payload[k] = v; });
 
       fetch('https://hooks.zapier.com/hooks/catch/17883793/ujitjay/', {
         method: 'POST',
-        body: data,
-        mode: 'no-cors'
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       }).then(function() {
         window.location.href = 'grazie.html';
       }).catch(function() {
