@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KF48Q7NB');</script>
-<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prima Sessione in Promo – Dott. Leonardo Manente Fisioterapista</title>
@@ -234,6 +227,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @media (max-width: 480px) {
       .lm-form-row { grid-template-columns: 1fr; }
     }
+    .lm-form-consent { display: flex; align-items: flex-start; gap: 10px; }
+    .lm-form-consent input[type="checkbox"] { flex-shrink: 0; margin-top: 3px; width: 17px; height: 17px; cursor: pointer; accent-color: #3BA8B0; }
+    .lm-form-consent label { font-size: 12px; color: #556070; line-height: 1.5; cursor: pointer; }
+    .lm-form-consent a { color: #3BA8B0; text-decoration: underline; }
 
     /* Scroll target for CTA links */
     #form { scroll-margin-top: 24px; }
@@ -526,10 +523,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF48Q7NB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
   <!-- ══════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════ -->
@@ -591,6 +585,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="lm-form-group">
               <label class="lm-form-label" for="problema">Raccontaci qual è il tuo problema al momento</label>
               <textarea class="lm-form-input lm-form-textarea" id="problema" name="problema" placeholder="Descrivi brevemente il tuo problema..." rows="3"></textarea>
+            </div>
+            <div class="lm-form-consent">
+              <input type="checkbox" id="consenso" name="consenso" required>
+              <label for="consenso">Dichiaro di aver letto la <a href="privacy-policy.html" target="_blank">Privacy Policy</a> e accetto i <a href="privacy-policy.html#termini" target="_blank">Termini e Condizioni di vendita</a>.</label>
             </div>
             <button type="submit" class="lm-btn lm-btn-full" id="submit-btn">Prenota la Prima Sessione →</button>
           </form>
@@ -925,6 +923,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ══════════════════════════════════════════════ -->
   <footer class="lm-footer">
     <p class="lm-footer-name">© 2026 Dott. Leonardo Manente – Fisioterapista professionista a Marcon.</p>
+    <p style="margin-bottom:14px;">
+      <a href="privacy-policy.html" style="color:rgba(255,255,255,.45);font-size:12px;text-decoration:underline;margin:0 10px;">Privacy Policy</a>
+      <a href="privacy-policy.html#termini" style="color:rgba(255,255,255,.45);font-size:12px;text-decoration:underline;margin:0 10px;">Termini e Condizioni di vendita</a>
+    </p>
     <p class="lm-footer-copy">
       *This Website is not a part of Facebook or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK Inc.<br>
       Questo sito non fa parte del sito Facebook o Facebook Inc. Inoltre, questo sito NON è approvato da Facebook in alcun modo. FACEBOOK è un marchio registrato di FACEBOOK, Inc.
